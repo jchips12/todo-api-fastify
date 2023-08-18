@@ -1,5 +1,5 @@
 const fastify = require('fastify')({logger: true});
-const dbConnector = require('./plugins/dbconn');
+const dbConnector = require('./plugins/datasource');
 const routes = require('./routes/routes');
 
 fastify.register(dbConnector);

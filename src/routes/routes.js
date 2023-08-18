@@ -1,6 +1,6 @@
 const {ObjectId} = require("@fastify/mongodb");
 
-async function routes(fastify, options) {
+async function routes(fastify) {
     fastify.get('/api/tasks', async (request, reply) => {
         const collection = fastify.mongo.db.collection('tasks');
         const result = await collection.find().toArray();
